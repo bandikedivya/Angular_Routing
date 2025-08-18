@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class LogoutComponent {
 
+  btnlogout()
+  {
+    alert("Logout Successful!");
+  }
 }

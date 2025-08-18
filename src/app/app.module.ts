@@ -8,11 +8,17 @@ import { HomeComponent } from './home/home.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { CustomerSupportComponent } from './customer-support/customer-support.component';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 // Step - 1 : Should add the RouterModule under imports.
 // Step - 2 : Declaring variable with Routes[path].
 // Step - 3 : Adding RouterModule.forRoot(routes) [forRoot] is a predefined method for RouteModule.
 const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent,
+
+  },
   {
     path: 'home',
     component: HomeComponent,
@@ -29,7 +35,7 @@ const routes: Routes = [
     path: 'logout',
     component: LogoutComponent
   }
-  
+
 
 ]
 @NgModule({
@@ -38,11 +44,12 @@ const routes: Routes = [
     LogoutComponent,
     HomeComponent,
     OrderHistoryComponent,
-    CustomerSupportComponent
+    CustomerSupportComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule, 
+    RouterModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

@@ -1,0 +1,9 @@
+button{
+    background-color: rgb(5, 188, 69);
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+button:hover{
+    background-color: lightgreen;
+}
