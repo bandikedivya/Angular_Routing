@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class LoginComponent {
 btnlogin()
 {
-  alert('Login Successful!');
+  alert('🎉Login Successful');
 }
 }

@@ -9,6 +9,6 @@ export class LogoutComponent {
 
   btnlogout()
   {
-    alert("Logout Successful!");
+    alert(" ⏻ Logout Successful");
   }
 }

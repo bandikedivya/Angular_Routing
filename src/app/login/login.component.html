@@ -1,19 +1,23 @@
-<h1>Login</h1>
 
+<div class="container mt-5" style="max-width: 400px;">
+    <h1 class=" text-center mb-4">Login</h1>
 
-<label for = "username">Username</label>
-<br>
-<input type ="text" id="username" name="username" placeholder="Enter your username"/>
+    <form>
+        <div class="md-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" class="form-control" placeholder="Enter your username" />
+        </div>
 
-<br>
-<label for = "password">Password</label>
-<br>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" />
+        </div>
 
-<input type ="password" id ="password" name = "password" placeholder="Enter your password"/>
-<br>
-<br>
-<button class = "btn btn-primary" (click)="btnlogin()" onclick="location.href='home'">Login in</button>
+        <div class="d-grid">
+            <button class="btn btn-primary" (click)="btnlogin()" onclick="location.href='home'">Log in</button>
+        </div>
 
-<a href="/forgot-password" class="forgot-link">Forgot Password?</a>
-
+        <a href="/forgot-password" class="forgot-link">Forgot Password?</a>
+    </form>
+</div>
 <!-- <button class = "btn btn-primary" (click)="btnlogout()" onclick="location.href='home'">Home</button> -->

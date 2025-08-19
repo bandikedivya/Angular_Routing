@@ -9,15 +9,16 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { CustomerSupportComponent } from './customer-support/customer-support.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 // Step - 1 : Should add the RouterModule under imports.
 // Step - 2 : Declaring variable with Routes[path].
 // Step - 3 : Adding RouterModule.forRoot(routes) [forRoot] is a predefined method for RouteModule.
 const routes: Routes = [
   {
-    path: 'login',
+    //Default Login Page[we mention nothing in the quotes]
+    path: '',  
     component: LoginComponent,
-
   },
   {
     path: 'home',
@@ -26,6 +27,14 @@ const routes: Routes = [
   {
     path: 'order-history',
     component: OrderHistoryComponent
+  },
+  {
+    path: 'order-details',
+    component: OrderDetailsComponent
+  },
+  {
+    path: 'order-details/:OrderId',
+    component: OrderDetailsComponent
   },
   {
     path: 'customer-support',
@@ -45,7 +54,8 @@ const routes: Routes = [
     HomeComponent,
     OrderHistoryComponent,
     CustomerSupportComponent,
-    LoginComponent
+    LoginComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,
