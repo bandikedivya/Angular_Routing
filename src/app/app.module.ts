@@ -37,6 +37,14 @@ const routes: Routes = [
     component: OrderDetailsComponent
   },
   {
+    path: 'order-details/:OrderId/order-history',
+    component: OrderHistoryComponent
+  },
+  // {
+  //   path: 'order-details/:OrderId/order-history/order-details/:OrderId',
+  //   component: OrderDetailsComponent
+  // },
+  {
     path: 'customer-support',
     component: CustomerSupportComponent
   },
