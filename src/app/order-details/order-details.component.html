@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="recordsList.length == 0">
     <div class="col-md-8">
       <h1>Order Details</h1>
       <p>
@@ -10,3 +10,19 @@
       </p>
     </div>
   </div>
+
+
+  
+  <ul style = "list-style: none;">
+    <li *ngFor = "let item of recordsList">
+      <h2>Order ID: #{{item.Id}} Details</h2>
+      <br>
+      <p><strong>ID : </strong>{{item.Id}}</p>
+      <p><strong>ProductName : </strong>{{item.ProductName}}</p>
+      <p><strong>PaymentMode : </strong>{{item.PaymentMode}}</p>
+      <p><strong>OrderDate : </strong>{{item.OrderDate}}</p>
+      <p><strong>ContactNo : </strong>{{item.ContactNo}}</p>
+      <p><strong>Address : </strong>{{item.Address}}</p>
+    </li>
+  </ul>
+

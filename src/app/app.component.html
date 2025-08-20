@@ -2,31 +2,53 @@
   <nav class="navbar navbar-light">
     <div class="container-fluid">
       <ul class="navbar-nav d-flex flex-row">
-         <li class="nav-item p-2">
+        <li class="nav-item p-2">
           <!-- Default Login Page[we mention nothing in the quotes] -->
           <a routerLink="" class="nav-link btn btn-primary me-3 p-2">🔒Login</a>
         </li>
         <li class="nav-item p-2">
-          <a routerLink="home" class="nav-link btn btn-primary me-3 p-2">🏠 Home</a>
+          <a routerLink="home" class="nav-link btn btn-primary me-3 p-2"
+            >🏠 Home</a
+          >
         </li>
         <li class="nav-item p-2">
-          <a routerLink="order-history" class="nav-link btn btn-primary me-3 p-2">🛒 Your Orders</a>
+          <a
+            routerLink="order-history"
+            class="nav-link btn btn-primary me-3 p-2"
+            >🛒 Your Orders</a
+          >
         </li>
         <li class="nav-item p-2">
-          <a routerLink="order-details" class="nav-link btn btn-primary me-3 p-2">📦🔍 Order Details</a>
+          <a
+            routerLink="order-details"
+            class="nav-link btn btn-primary me-3 p-2"
+            >📦🔍 Order Details</a
+          >
         </li>
         <li class="nav-item p-2">
-          <a routerLink="customer-support" class="nav-link btn btn-primary me-3 p-2">🤵‍♀️️ Customer Support</a>
+          <a
+            routerLink="customer-support"
+            class="nav-link btn btn-primary me-3 p-2"
+            >🤵‍♀️️ Customer Support</a
+          >
         </li>
         <li class="nav-item p-2">
-          <a routerLink="logout" class="nav-link btn btn-primary me-3 p-2" >⏻ Logout</a>
+          <a routerLink="logout" class="nav-link btn btn-primary me-3 p-2"
+            >⏻ Logout</a
+          >
         </li>
       </ul>
     </div>
   </nav>
 </div>
 
-
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 
 <!-- <style>
   /* Change button color on hover to primary color */
@@ -36,18 +58,6 @@
   }
 </style> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Should Add router-outlet to capture the component -->
-<router-outlet></router-outlet>
+
 <!-- <button type="button" class="btn btn-primary">Primary</button> -->
