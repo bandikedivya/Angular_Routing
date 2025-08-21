@@ -21,6 +21,8 @@ export class OrderDetailsComponent implements OnInit{
 
 
   ngOnInit(): void {
+
+    //Passing as a Parameter
     this.activatedroute.params.subscribe((parameterData:any)=>{
       console.log(parameterData); //OrderId
 
@@ -29,6 +31,27 @@ export class OrderDetailsComponent implements OnInit{
       this.recordsList = orders.filter((record)=>{ return record.Id == orderdata});
       
     })
+
+
+    // //Query Parameter
+    // this.activatedroute.queryParams.subscribe((parameterData:any)=>{
+    //   console.log(parameterData); //Id
+
+    //   let orders = this.orderdetailsservice.OrderDetails();
+    //   let orderdata = +parameterData.Id;
+    //   this.recordsList = orders.filter((record)=>{ return record.Id == orderdata});
+    //  })
+
+
+    // //Fragment 
+    // this.activatedroute.fragment.subscribe((parameterData:any)=>{
+    //   console.log(parameterData); //orderid's like 1075, 7826
+
+    //   let orders = this.orderdetailsservice.OrderDetails();
+    //   let orderdata = +parameterData;
+    //   this.recordsList = orders.filter((record)=>{ return record.Id == orderdata});
+    //  })
+    
   }
 
 }

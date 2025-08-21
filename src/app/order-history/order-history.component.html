@@ -1,24 +1,48 @@
 <h1>Your Orders</h1>
 
-<br>
-<table class = "table table-ordered">
-    
-    <thead>
-        <tr>
-            <th>Order Id</th>
-            <th>Product Name</th>
-            <th>Order Date</th>
-            <th>Payment Mode</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of OrdersList">
-            <td><a [routerLink]="['../order-details', item.Id]">{{item.Id}}</a></td>
-            <td>{{item.ProductName}}</td>
-            <td>{{item.OrderDate}}</td>
-            <td>{{item.PaymentMode}}</td>
-        </tr>
-        <!-- <tr>
+<br />
+<table class="table table-ordered"  >
+  <thead class="link-success">
+    <tr>
+      <th>Order Id</th>
+      <th>Product Name</th>
+      <th>Order Date</th>
+      <th>Payment Mode</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr  *ngFor="let item of OrdersList" >
+      <td >
+        <!--using routerLink-->
+        <a [routerLink]="['../order-details', item.Id]">{{item.Id}}</a>
+
+        <!--using (click) adding logic to navigate in the order-history.component.ts file-->
+        <!--Passing the item.Id as a argument to the navOrderDetails() function-->
+
+        <!-- <a class="link-primary"  style="cursor: pointer" (click)="navOrderDetails(item.Id)">{{ item.Id }} </a > -->
+            
+        <!-- Query Parameter -->
+
+        <!-- <a [routerLink]="['../order-details']" [queryParams]="{'Id': item.Id}">{{item.Id}}</a> -->
+        <!--using (click) adding logic to navigate in the order-history.component.ts file-->
+        <!-- <a class="link-primary"  style="cursor: pointer" (click)="navOrderDetails(item.Id)">{{ item.Id }} </a > -->
+        
+            
+
+        <!-- Fragment Parameter -->
+
+        <!-- <a [routerLink]="['../order-details']" fragment= "{{item.Id}}">{{item.Id}}</a> -->
+        <!--using (click) adding logic to navigate in the order-history.component.ts file-->
+        <!-- <a class="link-primary"  style="cursor: pointer" (click)="navOrderDetails(item.Id)">{{ item.Id }} </a > -->
+        
+
+
+      </td>
+      <td>{{ item.ProductName }}</td>
+      <td>{{ item.OrderDate }}</td>
+      <td>{{ item.PaymentMode }}</td>
+    </tr>
+    <!-- <tr>
             <td>#1075</td>
             <td>Teamspirit Men Sweatshirt</td>
             <td>25-01-2025</td>
@@ -36,15 +60,20 @@
             <td>30-01-2025</td>
             <td>Prepaid</td>
         </tr> -->
-    </tbody>
+  </tbody>
 </table>
-<br>
-<br>
-<br>
+<br />
+<br />
+<br />
 
+<p>
+  To Redirect To Home Page Click the Link
+  <a routerLink="/home"> Go To Home</a>
+</p>
+<br />
+<br />
 
-<a routerLink='/home'>Go To Home</a>
-<br>
-<br>
-
-<p> To Contact Customer Support click the link <a routerLink="/customer-support">Customer Support</a></p>
+<p>
+  To Contact Customer Support click the link
+  <a routerLink="/customer-support"> Customer Support</a>
+</p>

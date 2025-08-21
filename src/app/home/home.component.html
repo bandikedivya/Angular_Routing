@@ -22,10 +22,22 @@
         challenges.
       </p>
       <!-- <p>For More details <a class="btn btn-primary me-3 p-2" routerLink="['.../orders']">Customer orders</a></p> -->
-      <!-- <p>For More details <a routerLink="order-history" href="/order-history">Go To Orders</a></p> -->
-      <p>For More details <a [routerLink]="['../order-history']">Go To Orders</a></p>
-      <!-- <p>For More details <a routerLink="order-history">Customer orders</a></p>
-      <p> To Contact Customer Support click the link <a routerLink = "/customer-support">Customer Support</a></p> -->
+      <!-- <p>For More details <a routerLink="order-history" href="/order-history">Go To Orders</a></p>    hmtl navigation-->
+
+      <!-- <p>For More details <a [routerLink]="['../order-history']">Your Orders</a></p> -->
+      <!--Ang Navigation-->
+
+      <!--using event ((click)="")-->
+      <p>
+        To View Orders Click the Link
+        <a class="link-primary" (click)="navOrder()">Your Orders</a>
+      </p>
+
+      <!-- <p> To Contact Customer Support click the link <a routerLink = "/customer-support">Customer Support</a></p>  -->
+      <p>
+        To Contact Customer Support click the link
+        <a class="link-warning" (click)="navtoCustSup()">Customer Support</a>
+      </p>
 
       <!-- <p>For more details please click <a class="" routerLink="order-history">Orders History</a>  here</p> -->
       <!-- <p>For More details <a href="['.../order-history']">Customer orders</a></p> -->

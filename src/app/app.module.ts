@@ -10,6 +10,7 @@ import { CustomerSupportComponent } from './customer-support/customer-support.co
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { canActivateGuardGuard } from './can-activate-guard.guard';
 
 // Step - 1 : Should add the RouterModule under imports.
 // Step - 2 : Declaring variable with Routes[path].
@@ -34,7 +35,8 @@ const routes: Routes = [
   },
   {
     path: 'order-details/:OrderId',
-    component: OrderDetailsComponent
+    component: OrderDetailsComponent,
+    canActivate:[canActivateGuardGuard]  // should install the guard using command: ng g g canActivateGuard
   },
   {
     path: 'order-details/:OrderId/order-history',
