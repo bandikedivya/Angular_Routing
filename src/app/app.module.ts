@@ -18,7 +18,7 @@ import { canActivateGuardGuard } from './can-activate-guard.guard';
 const routes: Routes = [
   {
     //Default Login Page[we mention nothing in the quotes]
-    path: '',  
+    path: 'login',  
     component: LoginComponent,
   },
   {

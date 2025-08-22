@@ -19,11 +19,11 @@ export class OrderHistoryComponent {
   navOrderDetails(id: any) {
     this.router.navigate(['order-details', id]);
  
-  // Query Parameter
-    this.router.navigate(['order-details'],{queryParams: {'Id': id }});
+  // // Query Parameter
+     //this.router.navigate(['order-details'],{queryParams: {'Id': id }});
 
-    //Fragment Parameter
-    this.router.navigate(['order-details'],{fragment:id});
+  //   //Fragment Parameter
+    // this.router.navigate(['order-details'],{fragment:id});
 
 
    }

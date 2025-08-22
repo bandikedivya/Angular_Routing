@@ -38,12 +38,13 @@ export class OrderDetailsComponent implements OnInit{
     //   console.log(parameterData); //Id
 
     //   let orders = this.orderdetailsservice.OrderDetails();
-    //   let orderdata = +parameterData.Id;
+    //   // let orderdata = +parameterData.Id;
+    //   let orderdata = +parameterData.OrderId;
     //   this.recordsList = orders.filter((record)=>{ return record.Id == orderdata});
     //  })
 
 
-    // //Fragment 
+    //Fragment 
     // this.activatedroute.fragment.subscribe((parameterData:any)=>{
     //   console.log(parameterData); //orderid's like 1075, 7826
 
