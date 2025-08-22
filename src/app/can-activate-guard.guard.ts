@@ -7,6 +7,7 @@ let router = inject(Router);  //method to inject router. Instead of using constr
   
   //let name = "Customer";
 
+  
   localStorage.setItem("firstName", "Customer");
 
   let name = localStorage.getItem("firstName");
