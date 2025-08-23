@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild  } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,31 +7,32 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
-// btnlogin()
-// {
-//   alert('🎉Login Successful');
-// }
-@ViewChild('loginTextBox') loginText:ElementRef<any>;
-//shows error for loginText, so, should add "strictPropertyInitialization": false in tsconfig.json file
-
-  evnNavigate()
-  {
-    let name = this.loginText.nativeElement.value;
-
-
-    //check whether firstname is avaliable or not
-    let firstname = localStorage.getItem("firstname")
-
-    if(firstname == name){
-      console.log("You have permission");
-    }
-    else{
-      console.log("Access Denied! Please Contact Admin Once");
-    }
+constructor(private router:Router){
 
   }
 
+  @ViewChild('loginTextBox')  loginText:ElementRef<any>;
 
+
+  evtLogin(){
+
+     let name = this.loginText.nativeElement.value;
+
+     let firstName =  localStorage.getItem("firstName");
+
+     if(firstName  == name){
+        console.log("Access Granted!");
+        this.router.navigate(['../order-history']);
+     }
+
+     else{
+      console.log("Access Denied! Please contact your Admin");
+       localStorage.setItem('firstName', 'Customer');
+      //localStorage.setItem("firstName","Madan");
+     }
+
+
+
+  }
 
 }

@@ -1,31 +1,9 @@
-<!-- <div class="container mt-5" style="max-width: 400px;">
-    <h1 class=" text-center mb-4">Login</h1>
 
-    <form>
-        <div class="md-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" id="username" class="form-control" placeholder="Enter your username" />
-        </div>
 
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" id="password" class="form-control" placeholder="Enter your password" />
-        </div>
-
-        <div class="d-grid">
-            <button class="btn btn-primary" (click)="btnlogin()" onclick="location.href='home'">Log in</button>
-        </div>
-
-        <a href="/forgot-password" class="forgot-link">Forgot Password?</a>
-    </form>
-</div> -->
-<!-- <button class = "btn btn-primary" (click)="btnlogout()" onclick="location.href='home'">Home</button> -->
-
-<div>
-  <label class="form-label">User Login</label>
-  <br />
-  <input type="text" placeholder="Please Enter Username" #LoginTextBox />
-  <br />
-  <br />
-  <button class = "btn btn-primary" (click)="evnNavigate()">Submit</button>
+<div class="container">
+<label>User Login</label>
+<br>
+<input type="text" placeholder="Please enter your Id" #loginTextBox />
+<br>
+<button (click)="evtLogin()" class="btn btn-secondary">Click me</button>
 </div>
