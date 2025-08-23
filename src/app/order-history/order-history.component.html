@@ -63,9 +63,8 @@
   </tbody>
 </table>
 <br />
-<br />
-<br />
 
+<!-- 
 <p>
   To Redirect To Home Page Click the Link
   <a routerLink="/home"> Go To Home</a>
@@ -76,4 +75,21 @@
 <p>
   To Contact Customer Support click the link
   <a routerLink="/customer-support"> Customer Support</a>
-</p>
+</p> -->
+
+
+<!--using routerlink-->
+<!-- <button routerLink="/order-history/moredetails"   class = "btn btn-secondary">More Details</button> |
+<button routerLink="/order-history/benefits"   class = "btn btn-danger">Benefits</button> -->
+
+
+<!--using click, and router.navigate in order-history.ts file-->
+<button (click)="naviMoreDetails('moredetails')"   class = "btn btn-secondary">More Details</button> |
+<button  (click)="naviMoreDetails('benefits')"  class = "btn btn-danger">Benefits</button>
+
+<br>
+<br>
+
+<!--To capture the data of children [moredetails] component, we should mention the  router-outlet in the parent[order-history] component-->
+
+<router-outlet></router-outlet>

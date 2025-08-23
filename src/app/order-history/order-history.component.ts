@@ -28,4 +28,22 @@ export class OrderHistoryComponent {
 
    }
 
+    naviMoreDetails(tabName: string)
+    {
+      if(tabName == 'moredetails')
+      {
+        this.router.navigate(['order-history/moredetails']);
+      }
+      else if(tabName == 'benefits')
+      {
+        this.router.navigate(['order-history/benefits']);
+      }
+
+    } 
+    
+    // naviMoreDetails(moredetails)
+    // naviMoreDetails(benefits) 
+
+
+
 }

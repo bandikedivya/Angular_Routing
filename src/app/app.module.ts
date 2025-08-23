@@ -13,6 +13,8 @@ import { canActivateGuardGuard } from './can-activate-guard.guard';
 import { LoginComponent } from './login/login.component';
 import { deactivateGuard } from './deactivate.guard';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { MoredetailsComponent } from './order-history/moredetails/moredetails.component';
+import { BenefitsComponent } from './order-history/benefits/benefits.component';
 
 // Step - 1 : Should add the RouterModule under imports.
 // Step - 2 : Declaring variable with Routes[path].
@@ -20,7 +22,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 const routes: Routes = [
   //Default Login Page[we mention nothing in the quotes]
   {
-    path: 'login',  
+    path: 'login',
     component: LoginComponent,
   },
   {
@@ -30,21 +32,31 @@ const routes: Routes = [
   },
   {
     path: 'order-history',
-    component: OrderHistoryComponent
+    component: OrderHistoryComponent,
+    children: [
+      {
+        path: 'moredetails',               ////orders-history/moreinfo
+        component: MoredetailsComponent,
+      },
+      {
+        path: 'benefits',                  ////orders-history/benefits
+        component: BenefitsComponent,
+      },
+    ],
   },
   {
     path: 'order-details',
-    component: OrderDetailsComponent
+    component: OrderDetailsComponent,
   },
   {
     path: 'order-details/:OrderId',
     component: OrderDetailsComponent,
-    canActivate:[canActivateGuardGuard],  // should install the guard using command: ng g g canActivateGuard
-    canDeactivate: [deactivateGuard]   // should install the guard using command: ng g g Deactivate
+    canActivate: [canActivateGuardGuard], // should install the guard using command: ng g g canActivateGuard
+    canDeactivate: [deactivateGuard], // should install the guard using command: ng g g Deactivate
   },
   {
     path: 'order-details/:OrderId/order-history',
-    component: OrderHistoryComponent
+    component: OrderHistoryComponent,
   },
   // {
   //   path: 'order-details/:OrderId/order-history/order-details/:OrderId',
@@ -52,7 +64,7 @@ const routes: Routes = [
   // },
   {
     path: 'customer-support',
-    component: CustomerSupportComponent
+    component: CustomerSupportComponent,
   },
   // {
   //   path: 'logout',
@@ -61,10 +73,9 @@ const routes: Routes = [
   {
     path: '**',
     component: NotfoundComponent,
-  }
-
-
-]
+    data: [{issueName: '404 Not Found'}],
+  },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,14 +86,12 @@ const routes: Routes = [
     //LoginComponent,
     OrderDetailsComponent,
     LoginComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    MoredetailsComponent,
+    BenefitsComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [BrowserModule, RouterModule, RouterModule.forRoot(routes)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
